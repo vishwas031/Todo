@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ToDo</title>
     <link rel="shortcut icon" type="image/x-icon" href="./Todo Icon.webp" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,90 +16,133 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="todo.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Balsamiq+Sans&family=Julius+Sans+One&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <section>
-      <div class="theme-changer">
-        <div class="color purple"></div>
+      <div class="theme-changer primary">
+        <div class="color purple secondary"></div>
         <div class="color red"></div>
         <div class="color green"></div>
         <div class="color blue"></div>
         <div class="color black"></div>
       </div>
-      <div class="container">
+      <div
+        class="container primary"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+      >
         <div class="box">
-          <header>
+          <header class="secondaryDark">
             <h2>Todo List</h2>
           </header>
           <div class="list">
-            <ul>
-              <li>
-                <span><input type="checkbox" /> Valorant</span
+            <input
+              class="scroll"
+              type="text"
+              placeholder="What's your next Task?"
+              id="input"
+              maxlength="25"
+              minlength="1"
+            />
+            <ul id="LIST">
+              <li class="TodoTransi">
+                <span
+                  ><input type="checkbox" />
+                  <label for="todo">Valorant</label></span
                 ><i class="fas fa-minus-square"></i>
               </li>
-              <li>
-                <span><input type="checkbox" /> Data Structure</span
+              <li class="TodoTransi">
+                <span
+                  ><input type="checkbox" />
+                  <label for="todo">Data Structure</label></span
                 ><i class="fas fa-minus-square"></i>
               </li>
-              <li>
-                <span><input type="checkbox" /> C++</span
+              <li class="TodoTransi">
+                <span
+                  ><input type="checkbox" /><label for="todo">C++</label></span
                 ><i class="fas fa-minus-square"></i>
               </li>
-              <li>
-                <span><input type="checkbox" /> Sketching</span
+              <li class="TodoTransi">
+                <span
+                  ><input type="checkbox" /><label for="todo"
+                    >Sketching</label
+                  > </span
                 ><i class="fas fa-minus-square"></i>
               </li>
-              <li>
-                <span><input type="checkbox" /> Backend</span
+              <li class="TodoTransi">
+                <span
+                  ><input type="checkbox" /><label for="todo"
+                    >Backend</label
+                  > </span
                 ><i class="fas fa-minus-square"></i>
               </li>
-              <li>
-                <span><input type="checkbox" /> Resume</span
+              <li class="TodoTransi">
+                <span
+                  ><input type="checkbox" /><label for="todo"
+                    >Resume</label
+                  ></span
                 ><i class="fas fa-minus-square"></i>
               </li>
-              <li>
-                <span><input type="checkbox" /> Valorant</span
+              <li class="TodoTransi">
+                <span
+                  ><input type="checkbox" />
+                  <label for="todo">Valorant</label></span
                 ><i class="fas fa-minus-square"></i>
               </li>
-              <li>
-                <span><input type="checkbox" /> Data Structure</span
+              <li class="TodoTransi">
+                <span
+                  ><input type="checkbox" />
+                  <label for="todo">Data Structure</label></span
                 ><i class="fas fa-minus-square"></i>
               </li>
-              <li>
-                <span><input type="checkbox" /> C++</span
+              <li class="TodoTransi">
+                <span
+                  ><input type="checkbox" /><label for="todo">C++</label></span
                 ><i class="fas fa-minus-square"></i>
               </li>
-              <li>
-                <span><input type="checkbox" /> Sketching</span
+              <li class="TodoTransi">
+                <span
+                  ><input type="checkbox" /><label for="todo"
+                    >Sketching</label
+                  > </span
                 ><i class="fas fa-minus-square"></i>
               </li>
-              <li>
-                <span><input type="checkbox" /> Backend</span
+              <li class="TodoTransi">
+                <span
+                  ><input type="checkbox" /><label for="todo"
+                    >Backend</label
+                  > </span
                 ><i class="fas fa-minus-square"></i>
               </li>
-              <li>
-                <span><input type="checkbox" /> Resume</span
+              <li class="TodoTransi">
+                <span
+                  ><input type="checkbox" /><label for="todo"
+                    >Resume</label
+                  ></span
                 ><i class="fas fa-minus-square"></i>
               </li>
             </ul>
           </div>
           <div class="opt">
-            <i class="fas fa-trash-alt" title="Delete all Todos"></i>
-            <i class="fas fa-plus" title="Add new Todo"></i>
-            <i class="fas fa-minus" title="Delete completed Todos"></i>
+            <i class="fas fa-trash-alt secondary" title="Delete all Todos"></i>
+            <i
+              class="fas fa-plus secondary secondaryDark"
+              title="Add new Todo"
+            ></i>
+            <i
+              class="fas fa-minus secondary"
+              title="Delete completed Todos"
+            ></i>
           </div>
         </div>
       </div>
     </section>
   </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="todo.js"></script>
 </html>
