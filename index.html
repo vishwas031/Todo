@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -21,125 +21,126 @@
   </head>
   <body>
     <section>
-      <div class="theme-changer primary">
-        <div class="color purple secondary"></div>
+      <div class="theme-changer primary1">
+        <div class="color purple"></div>
         <div class="color red"></div>
         <div class="color green"></div>
         <div class="color blue"></div>
         <div class="color black"></div>
       </div>
       <div
-        class="container primary"
+        class="container primary1"
         data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
       >
         <div class="box">
-          <header class="secondaryDark">
+          <header class="secondaryDark1">
             <h2>Todo List</h2>
           </header>
+          <input
+            type="text"
+            placeholder="What's your next Task?"
+            id="input"
+            maxlength="25"
+            minlength="1"
+          />
           <div class="list">
-            <input
-              class="scroll"
-              type="text"
-              placeholder="What's your next Task?"
-              id="input"
-              maxlength="25"
-              minlength="1"
-            />
             <ul id="LIST">
               <li class="TodoTransi">
                 <span
                   ><input type="checkbox" />
                   <label for="todo">Valorant</label></span
-                ><i class="fas fa-minus-square"></i>
+                >
               </li>
               <li class="TodoTransi">
                 <span
                   ><input type="checkbox" />
                   <label for="todo">Data Structure</label></span
-                ><i class="fas fa-minus-square"></i>
+                >
               </li>
               <li class="TodoTransi">
                 <span
                   ><input type="checkbox" /><label for="todo">C++</label></span
-                ><i class="fas fa-minus-square"></i>
+                >
               </li>
               <li class="TodoTransi">
                 <span
                   ><input type="checkbox" /><label for="todo"
                     >Sketching</label
                   > </span
-                ><i class="fas fa-minus-square"></i>
+                >
               </li>
               <li class="TodoTransi">
                 <span
                   ><input type="checkbox" /><label for="todo"
                     >Backend</label
                   > </span
-                ><i class="fas fa-minus-square"></i>
+                >
               </li>
               <li class="TodoTransi">
                 <span
                   ><input type="checkbox" /><label for="todo"
                     >Resume</label
                   ></span
-                ><i class="fas fa-minus-square"></i>
+                >
               </li>
               <li class="TodoTransi">
                 <span
                   ><input type="checkbox" />
                   <label for="todo">Valorant</label></span
-                ><i class="fas fa-minus-square"></i>
+                >
               </li>
               <li class="TodoTransi">
                 <span
                   ><input type="checkbox" />
                   <label for="todo">Data Structure</label></span
-                ><i class="fas fa-minus-square"></i>
+                >
               </li>
               <li class="TodoTransi">
                 <span
                   ><input type="checkbox" /><label for="todo">C++</label></span
-                ><i class="fas fa-minus-square"></i>
+                >
               </li>
               <li class="TodoTransi">
                 <span
                   ><input type="checkbox" /><label for="todo"
                     >Sketching</label
                   > </span
-                ><i class="fas fa-minus-square"></i>
+                >
               </li>
               <li class="TodoTransi">
                 <span
                   ><input type="checkbox" /><label for="todo"
                     >Backend</label
                   > </span
-                ><i class="fas fa-minus-square"></i>
+                >
               </li>
               <li class="TodoTransi">
                 <span
                   ><input type="checkbox" /><label for="todo"
                     >Resume</label
                   ></span
-                ><i class="fas fa-minus-square"></i>
+                >
               </li>
             </ul>
           </div>
           <div class="opt">
-            <i class="fas fa-trash-alt secondary" title="Delete all Todos"></i>
             <i
-              class="fas fa-plus secondary secondaryDark"
-              title="Add new Todo"
+              class="fas fa-trash-alt secondary1"
+              id="delete-all"
             ></i>
+            <i class="fas fa-plus secondaryDark1" ></i>
             <i
-              class="fas fa-minus secondary"
-              title="Delete completed Todos"
+              class="fas fa-minus secondary1"
+              id="delete-completed-todo"
             ></i>
           </div>
         </div>
       </div>
     </section>
+    <div id="particles-js"></div>
   </body>
+  <script src="particles.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
