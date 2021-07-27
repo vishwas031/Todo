@@ -37,6 +37,9 @@
 .secondaryDark1 {
   background: #9860db;
 }
+.primary1Light {
+  background: #e8e3ffcc;
+}
 
 /* styles for particle js */
 
@@ -65,7 +68,6 @@ body {
 section {
   overflow: hidden;
   height: 100vh;
-  /* background: #ffffffcc; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,6 +118,10 @@ section {
   align-items: flex-start;
   position: relative;
   left: -5%;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  border-radius: 10px;
 }
 .box {
   height: 100%;

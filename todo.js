@@ -8,7 +8,8 @@ var green = document.querySelector('.green');
 var blue = document.querySelector('.blue');
 var black = document.querySelector('.black');
 
-var primary1 = document.querySelectorAll('.primary1')
+var primary1 = document.querySelector('.primary1')
+var primary1Light = document.querySelector('.primary1Light')
 var secondary1 = document.querySelectorAll('.secondary1');
 var secondaryDark1 = document.querySelectorAll('.secondaryDark1');
 
@@ -23,42 +24,47 @@ var deleteItem = document.getElementById('delete-item');
 purple.addEventListener('click', () => {
     var i;
     for (i = 0; i < 2; i++) {
-        primary1[i].style.background = "#e8e3ff";
         secondary1[i].style.background = "#af7eeb";
         secondaryDark1[i].style.background = "#9860db";
     }
+    primary1.style.background = "#e8e3ff";
+    primary1Light.style.background = "#e8e3ffcc";
 })
 green.addEventListener('click', () => {
     var i;
     for (i = 0; i < 2; i++) {
-        primary1[i].style.background = "#e3ffef";
         secondary1[i].style.background = "#70ec8f";
         secondaryDark1[i].style.background = "#60db85";
     }
+    primary1.style.background = "#e3ffef";
+    primary1Light.style.background = "#e3ffefca";
 })
 red.addEventListener('click', () => {
     var i;
     for (i = 0; i < 2; i++) {
-        primary1[i].style.background = "#ffe3e9";
         secondary1[i].style.background = "#eb7e96";
         secondaryDark1[i].style.background = "#db607f";
     }
+    primary1.style.background = "#ffe3e9";
+    primary1Light.style.background = "#ffe3e9ce";
 })
 blue.addEventListener('click', () => {
     var i;
     for (i = 0; i < 2; i++) {
-        primary1[i].style.background = "#e3ecff";
         secondary1[i].style.background = "#7e89eb";
         secondaryDark1[i].style.background = "#6072db";
     }
+    primary1.style.background = "#e3ecffca";
+    primary1Light.style.background = "#e3ecffce";
 })
 black.addEventListener('click', () => {
     var i;
     for (i = 0; i < 2; i++) {
-        primary1[i].style.background = "#b6b6b6";
         secondary1[i].style.background = "#555555";
         secondaryDark1[i].style.background = "#494949";
     }
+    primary1.style.background = "#b6b6b6";
+    primary1Light.style.background = "#b6b6b6c7";
 })
 
 addNote.addEventListener('click', addItem);
@@ -82,15 +88,11 @@ function addItem() {
         var label = document.createElement("label");
         label.setAttribute("for", "todo");
 
-        var removeTodo = document.createElement("i");
-        removeTodo.setAttribute("class", "fas fa-minus-square")
-
 
         label.appendChild(textNode);
         span.appendChild(checkbox);
         span.appendChild(label);
         li.appendChild(span);
-        li.appendChild(removeTodo);
 
         ul.insertBefore(li, ul.childNodes[0]);
         setTimeout(() => {
@@ -117,15 +119,11 @@ function addItemKeypress(event) {
         var label = document.createElement("label");
         label.setAttribute("for", "todo");
 
-        var removeTodo = document.createElement("i");
-        removeTodo.setAttribute("class", "fas fa-minus-square")
-
 
         label.appendChild(textNode);
         span.appendChild(checkbox);
         span.appendChild(label);
         li.appendChild(span);
-        li.appendChild(removeTodo);
 
         ul.insertBefore(li, ul.childNodes[0]);
         setTimeout(() => {
